@@ -26,6 +26,8 @@ def _download(url: str) -> List[str]:
 
 def _download_urls(urls: List[str]) -> Dict[str, List[str]]:
     """ donwload multiplied ss subscription resource """
+    if len(urls) == 0:
+        return {}
     contents: Dict[str, str] = {}
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
