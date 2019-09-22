@@ -3,7 +3,7 @@ import re
 import urllib.parse as urlparse
 from typing import Dict, List
 
-import utils
+from .. import utils
 
 
 class SSRNode(object):
