@@ -58,7 +58,7 @@ def deserialize_urls(sub_urls: List[str]) -> Dict[str, List[SSRNode]]:
         for url in item[1]:
             split_result = urlparse.urlsplit(url)
             netloc = re.match(netloc_re, split_result.netloc)
-            query: Dict[str, str] = {item[0]: " ".join(item[1]) for item in urlparse.parse_qs(
+            query: Dict[str, str] = {item[0]: "+".join(item[1]).replace(" ", "+") for item in urlparse.parse_qs(
                 split_result.query, keep_blank_values=True).items()}
 
             node = SSRNode()
