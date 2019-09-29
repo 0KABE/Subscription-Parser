@@ -9,7 +9,7 @@ This package using additional dependencies.
 Execute the following command in the root directory of the package
 
 ```sh
-pip install -r requirements.txt
+pip install subscription-parser
 ```
 
 ## Usage
